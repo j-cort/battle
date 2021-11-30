@@ -1,20 +1,21 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
-get '/' do
-  'Hello World!'
+# get '/cat' do
+#   @names = ["Amigo", "Misty", "Almond"].sample
+#   erb(:index)
+# end
+
+get '/named_cat' do
+  @name = params[:name]
+  # puts params
+  erb(:named_cat)
 end
 
-get '/secret' do
-  "Hello Secret World"
-end
-
-get '/open' do
-  "Hello Open World"
-end
-
-get '/cat' do
-  erb(:index)
+get '/random_cat' do
+  # p params
+  @names = ["Amigo", "Misty", "Almond"].sample
+  erb(:random_cat)
 end
 
 # "https://blog.burakaymakci.com/2021/05/04/macos-openssl-file-not-found-error-while-installing-ruby-gems"
