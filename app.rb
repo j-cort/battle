@@ -8,7 +8,7 @@ require 'sinatra/reloader' if development?
 
 get '/named_cat' do
   @name = params[:name]
-  # puts params
+  # p params
   erb(:named_cat)
 end
 
