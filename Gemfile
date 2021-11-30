@@ -8,4 +8,11 @@ ruby '3.0.2'
 
 group :development, :test do
   gem "sinatra"
+  gem "thin"
+  gem "puma"
+  gem "reel"
+  gem "http"
+  gem "webrick"
+  gem "eventmachine"
+  gem 'sinatra-contrib'
 end
